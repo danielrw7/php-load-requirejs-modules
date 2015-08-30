@@ -5,6 +5,6 @@ define({
       }
    },
    initialize: function(options) {
-      console.log("Initializing with options", options);
+      console.log("Initializing example with options", options);
    }
 });
