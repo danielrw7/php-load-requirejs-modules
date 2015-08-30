@@ -136,10 +136,10 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-157170609"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-432221302"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-157170609" class="accordion-body collapse in">
+            <div id="namespace-432221302" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
@@ -406,8 +406,32 @@
                 
                 				
                                                             <h4>Examples</h4>
-                                                                <h5>Example usage</h5>
-                        <pre class="pre-scrollable">** File not found : https://github.com/danielrw7/php-requirejs-modules/tree/master/examples/load **</pre>
+                                                                <h5></h5>
+                        <pre class="pre-scrollable">&lt;?php
+/**
+ * An example of using the method `load`
+ */
+
+require_once(&quot;../../RequireJSModules.php&quot;);
+
+$js_modules = new RequireJSModules(array(), &quot;.&quot;);
+
+$js_modules-&gt;load(&quot;example&quot;, array(
+   &quot;option1&quot; =&gt; &quot;value&quot;,
+   &quot;option2&quot; =&gt; &quot;value&quot;,
+));
+
+$js_modules-&gt;load(&quot;example&quot;, array(
+   &quot;option1&quot; =&gt; &quot;another value&quot;,
+   &quot;option2&quot; =&gt; &quot;another value&quot;,
+));
+
+echo &quot;&lt;script src=&#039;lib/require.js&#039;&gt;&lt;/script&gt;&quot;;
+echo $js_modules-&gt;output();
+
+?&gt;
+
+</pre>
                                                 </article>
         </div>
         <aside class="span4 detailsbar">
@@ -448,8 +472,50 @@
                 
                 				
                                                             <h4>Examples</h4>
-                                                                <h5>Example usage</h5>
-                        <pre class="pre-scrollable">** File not found : https://github.com/danielrw7/php-requirejs-modules/tree/master/examples/load_multiple **</pre>
+                                                                <h5></h5>
+                        <pre class="pre-scrollable">&lt;?php
+/**
+ * Examples of using the method `load_multiple`
+ */
+
+require_once(&quot;../../RequireJSModules.php&quot;);
+
+$js_modules = new RequireJSModules(array(), &quot;.&quot;);
+
+$js_modules-&gt;load_multiple(&quot;example&quot;, array(
+   array(
+      &quot;option1&quot; =&gt; &quot;value&quot;,
+      &quot;option2&quot; =&gt; &quot;value&quot;,
+   ),
+   array(
+      &quot;option1&quot; =&gt; &quot;another value&quot;,
+      &quot;option2&quot; =&gt; &quot;another value&quot;,
+   ),
+));
+
+$js_modules-&gt;load_multiple(array(
+   array(
+      &quot;file&quot; =&gt; &quot;example2&quot;,
+      &quot;options&quot; =&gt; array(
+         &quot;option1&quot; =&gt; &quot;value&quot;,
+         &quot;option2&quot; =&gt; &quot;value&quot;,
+      )
+   ),
+   array(
+      &quot;file&quot; =&gt; &quot;example2&quot;,
+      &quot;options&quot; =&gt; array(
+         &quot;option1&quot; =&gt; &quot;another value&quot;,
+         &quot;option2&quot; =&gt; &quot;another value&quot;,
+      )
+   ),
+));
+
+echo &quot;&lt;script src=&#039;lib/require.js&#039;&gt;&lt;/script&gt;&quot;;
+echo $js_modules-&gt;output();
+
+?&gt;
+
+</pre>
                                                 </article>
         </div>
         <aside class="span4 detailsbar">
@@ -541,7 +607,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on August 30th, 2015 at 21:21.
+                    on August 30th, 2015 at 21:31.
                 </section>
             </section>
         </section>
