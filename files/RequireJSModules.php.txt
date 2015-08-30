@@ -40,7 +40,7 @@ class RequireJSModules {
    /**
     * Save module name and configuration
     *
-    * @link https://github.com/danielrw7/php-requirejs-modules/tree/master/examples/load Example usage
+    * @example https://github.com/danielrw7/php-requirejs-modules/tree/master/examples/load Example usage
     *
     * @param string $module The module name
     * @param array  $config The configuration for the module
@@ -56,7 +56,7 @@ class RequireJSModules {
    /**
     * Load multiple modules
     *
-    * @link https://github.com/danielrw7/php-requirejs-modules/tree/master/examples/load_multiple Example usage
+    * @example https://github.com/danielrw7/php-requirejs-modules/tree/master/examples/load_multiple Example usage
     *
     * @param string|array $arg1 The module name or an array with multiple modules
     * @param array $config Multiple configurations for when $arg1 is a module name.
