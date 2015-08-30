@@ -1,6 +1,6 @@
 <?php
 
-class JSModules {
+class RequireJSModules {
    function __construct($config, $base_dir = "js", $base_url = "") {
       $this->config = array_merge(array(
          "base_dir" => $base_dir
