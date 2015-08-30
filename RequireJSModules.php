@@ -1,4 +1,7 @@
 <?php
+/**
+ * Stores the RequireJSModules class
+ */
 
 /**
  * A helper class for loading RequireJS modules with options
