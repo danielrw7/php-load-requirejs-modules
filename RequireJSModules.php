@@ -10,11 +10,34 @@ class RequireJSModules {
       $this->module_config = array();
    }
 
-   function include_module($module, $config = array()) {
+   function load($module, $config = array()) {
       $this->files[] = $module;
       if (is_array($config) && count($config)) {
          if (!isset($this->module_config[$module]) || !is_array($this->module_config[$module])) $this->module_config[$module] = array();
          $this->module_config[$module][] = $config;
+      }
+   }
+
+   function load_multiple($arg1, $arg2 = array()) {
+      if (gettype($arg1) == "string") {
+         $module = $arg1;
+         $options_arr = $arg2;
+         foreach($options_arr as $options) {
+            $this->load($module, $options);
+         }
+      } else if (is_array($arg1)) {
+         $modules = $arg1;
+         foreach($modules as $module) {
+            if (is_array($module)) {
+               if (isset($module['options'])) {
+                  $this->load($module['file'], $module['options']);
+               } else {
+                  $this->load($module['file']);
+               }
+            } else {
+               $this->load($module);
+            }
+         }
       }
    }
 
