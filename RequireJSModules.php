@@ -40,6 +40,8 @@ class RequireJSModules {
    /**
     * Save module name and configuration
     *
+    * @example files/examples/load/index.php.txt
+    *
     * @param string $module The module name
     * @param array  $config The configuration for the module
     */
@@ -53,6 +55,8 @@ class RequireJSModules {
 
    /**
     * Load multiple modules
+    *
+    * @example files/examples/load_multiple/index.php.txt
     *
     * @param string|array $arg1 The module name or an array with multiple modules
     * @param array $config Multiple configurations for when $arg1 is a module name.
