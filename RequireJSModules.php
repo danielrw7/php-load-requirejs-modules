@@ -1,6 +1,17 @@
 <?php
 
+/**
+ * A helper class for loading RequireJS modules with options
+ *
+ * @author Daniel Wilson <danielrw7@gmail.com>
+ */
 class RequireJSModules {
+   /**
+    * The class constructor
+    *
+    * @param mixed[] $config An assoc array that will be passed to requirejs.config
+    * @param string  $base_dir The base directory for javascript files that will be loaded
+    */
    function __construct($config, $base_dir = "js") {
       $this->config = array_merge(array(
          "base_dir" => $base_dir
@@ -10,6 +21,12 @@ class RequireJSModules {
       $this->module_config = array();
    }
 
+   /**
+    * Save module name and configuration
+    *
+    * @param string $module The module name
+    * @param array  $config The configuration for the module
+    */
    function load($module, $config = array()) {
       $this->files[] = $module;
       if (is_array($config) && count($config)) {
@@ -18,6 +35,12 @@ class RequireJSModules {
       }
    }
 
+   /**
+    * Load multiple modules
+    *
+    * @param string|array $arg1 The module name or an array with multiple modules
+    * @param array $config Multiple configurations for when $arg1 is a module name.
+    */
    function load_multiple($arg1, $arg2 = array()) {
       if (gettype($arg1) == "string") {
          $module = $arg1;
@@ -41,6 +64,11 @@ class RequireJSModules {
       }
    }
 
+   /**
+    * Generate HTML scripts to be outputted into the page
+    *
+    * @return string Script tags to output into the page
+    */
    function output() {
       $requre_config_json = json_encode($this->config);
       $files_json = json_encode($this->files);
