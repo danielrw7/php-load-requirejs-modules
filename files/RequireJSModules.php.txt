@@ -7,6 +7,15 @@
  */
 class RequireJSModules {
    /**
+    * @var $files array Files that will be outputted
+    * @var $module_config mixed[] An assoc array that will be passed to requirejs.config
+    * @var $base_dir array The base directory for javascript files that will be loaded
+    */
+   public $files = array(),
+          $module_config = array(),
+          $base_dir = "";
+
+   /**
     * The class constructor
     *
     * @param mixed[] $config An assoc array that will be passed to requirejs.config
@@ -17,8 +26,6 @@ class RequireJSModules {
          "base_dir" => $base_dir
       ), $config);
       $this->base_dir = $base_dir;
-      $this->files = array();
-      $this->module_config = array();
    }
 
    /**
