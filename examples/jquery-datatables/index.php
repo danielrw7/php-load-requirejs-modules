@@ -1,4 +1,7 @@
 <?php
+/**
+ * An example using jQuery dataTables
+ */
 
 require_once("../../RequireJSModules.php");
 
