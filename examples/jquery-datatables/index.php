@@ -1,6 +1,6 @@
 <?php
 /**
- * An example using jQuery dataTables
+ * jQuery dataTables example
  */
 
 require_once("../../RequireJSModules.php");
