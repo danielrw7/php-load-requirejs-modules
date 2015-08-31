@@ -1,10 +1,6 @@
 # php-requirejs-modules
 A tool for loading RequireJS modules with configuration from within PHP
 
-[View Documentation](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html)
-
------------
-
 ## Usage:
 
 ### Inclusion
@@ -65,3 +61,6 @@ $modules->load("moduleName", array(
 ```
 echo $modules->output();
 ```
+
+-----------
+[View Documentation](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html)
