@@ -5,7 +5,13 @@ A tool for loading RequireJS modules with configuration from within PHP
 
 ### Inclusion
 ```
+<?php
+
 include("RequireJSModules.php");
+
+$requirejs_config = array();
+$javascript_dir = "js";
+
 $modules = new RequireJSModules($requirejs_config, $javascript_dir);
 ```
 
