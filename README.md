@@ -9,7 +9,7 @@ include("RequireJSModules.php");
 $modules = new RequireJSModules($requirejs_config, $javascript_dir);
 ```
 
-### [Loading a module](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load)
+### [Loading a module](examples/load)
 ```
 $modules->load("moduleName", array(
   "moduleOption" => "value",
@@ -17,7 +17,7 @@ $modules->load("moduleName", array(
 ));
 ```
 
-### [Loading multiple modules](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load_multiple)
+### [Loading multiple modules](examples/load_multiple)
 ```
 $modules->load(array(
   array(
@@ -37,7 +37,7 @@ $modules->load(array(
 ));
 ```
 
-### [Loading multiple instances of the same module](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load_multiple)
+### [Loading multiple instances of the same module](examples/load_multiple)
 ```
 $modules->load("moduleName", array(
   array(
