@@ -17,4 +17,13 @@ $modules->load("moduleName", array(
 ));
 ```
 
+### [Loading multiple modules (method 1)](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load)
+```
+$modules->load(array(
+  array(
+    "moduleOption" => "value",
+    "anotherModuleOption" => "anotherValue"
+));
+```
+
 [View Documentation](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html)
