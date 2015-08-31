@@ -51,5 +51,10 @@ $modules->load("moduleName", array(
 ));
 ```
 
+### [Output HTML scripts](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_output)
+```
+echo $modules->output();
+```
+
 -----------
 [View Documentation](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html)
