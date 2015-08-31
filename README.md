@@ -17,13 +17,39 @@ $modules->load("moduleName", array(
 ));
 ```
 
-### [Loading multiple modules (method 1)](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load)
+### [Loading multiple modules (method 1)](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load_multiple)
 ```
 $modules->load(array(
   array(
-    "moduleOption" => "value",
-    "anotherModuleOption" => "anotherValue"
+    "file" => "moduleName",
+    "options" => array(
+      "moduleOption" => "value",
+      "anotherModuleOption" => "anotherValue"
+    )
+  ),
+  array(
+    "file" => "anotherModule",
+    "options" => array(
+      "moduleOption" => "value",
+      "anotherModuleOption" => "anotherValue"
+    )
+  ),
 ));
 ```
 
+### [Loading multiple instances of the same module](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html#method_load_multiple)
+```
+$modules->load("moduleName", array(
+  array(
+    "moduleOption" => "value",
+    "anotherModuleOption" => "anotherValue"
+  ),
+  array(
+    "moduleOption" => "value",
+    "anotherModuleOption" => "anotherValue"
+  ),
+));
+```
+
+-----------
 [View Documentation](//danielrw7.github.io/php-requirejs-modules/classes/RequireJSModules.html)
